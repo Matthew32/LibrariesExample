@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "com.matthew.librariesexamplemaps"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    testCompile 'junit:junit:4.12'
+    //standard libraries
+
+
+    //glide
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.2.0'
+    compile 'com.github.bumptech.glide:glide:4.2.0'
+    //retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    //butterknife
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //parceler
+    compile 'org.parceler:parceler-api:1.1.9'
+    annotationProcessor 'org.parceler:parceler:1.1.9'
+    //icepick
+    compile 'frankiesardo:icepick:3.2.0'
+    provided 'frankiesardo:icepick-processor:3.2.0'
+    //leakcanary
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    //espresso
+    // Other dependencies ...
+    //androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    //roboletric
+    testCompile "org.robolectric:robolectric:3.4.2"
+    //ion
+    compile 'com.koushikdutta.ion:ion:2.+'
+    //mosby
+    compile 'com.hannesdorfmann.mosby3:mvp:3.0.4' // Plain MVP
+
+    // MVP + ViewState + LCE Views
+    compile 'com.hannesdorfmann.mosby3:mvp-lce:3.0.4'
+
+    // Null Object Presenter for MVP
+    compile 'com.hannesdorfmann.mosby3:mvp-nullobject-presenter:3.0.4'
+
+    //rxjava
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
+
+
+    //realm adapters
+    compile 'io.realm:android-adapters:2.0.0'
+
+    //google maps
+    compile 'com.google.android.gms:play-services-maps:11.4.0'
+
+//
+}
