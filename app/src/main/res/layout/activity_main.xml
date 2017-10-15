@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="clickThing"
+        android:id="@+id/am_btn_press"
         android:text="@string/am_tv_text" />
 
 </android.support.constraint.ConstraintLayout>

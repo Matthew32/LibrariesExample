@@ -4,10 +4,14 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.hannesdorfmann.mosby3.mvp.MvpActivity;
 import com.matthew.librariesexamplemaps.R;
 import com.matthew.librariesexamplemaps.features.map.MapActivity;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MainActivity extends MvpActivity<MainActivityView, MainActivityPresenter> implements MainActivityView {
 
@@ -15,6 +19,7 @@ public class MainActivity extends MvpActivity<MainActivityView, MainActivityPres
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
     }
 
     @NonNull
@@ -59,4 +64,7 @@ public class MainActivity extends MvpActivity<MainActivityView, MainActivityPres
         startActivity(intent);
 
     }
+
+    @BindView(R.id.am_btn_press)
+    Button btn;
 }

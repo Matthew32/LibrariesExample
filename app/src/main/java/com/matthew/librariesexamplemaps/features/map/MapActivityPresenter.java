@@ -118,7 +118,6 @@ public class MapActivityPresenter extends MvpBasePresenter<MapActivityView> {
 
     public void setMapPoints() {
 
-        // Query Realm for all dogs younger than 2 years old
         RealmResults<MapPoint> points = realm.where(MapPoint.class).findAll();
 
         getView().setMaps(points);
