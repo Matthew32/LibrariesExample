@@ -3,7 +3,7 @@ apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.0"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.matthew.librariesexamplemaps"
         minSdkVersion 16
@@ -47,8 +47,8 @@ dependencies {
     compile 'org.parceler:parceler-api:1.1.9'
     annotationProcessor 'org.parceler:parceler:1.1.9'
     //icepick
-    compile 'frankiesardo:icepick:3.2.0'
-    provided 'frankiesardo:icepick-processor:3.2.0'
+    //compile 'frankiesardo:icepick:3.2.0'
+    //provided 'frankiesardo:icepick-processor:3.2.0'
     //leakcanary
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
